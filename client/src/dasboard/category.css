@@ -1,0 +1,38 @@
+.highlight{
+    background-color: #eeffc9;
+    border: 2px solid #D6D5A8;
+}
+
+li{
+    width: 200px;
+    list-style: none;
+    padding: 0px 0px 0px 5px;
+    color: #51557E
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.del{
+    background-color: red;
+    color: #D6D5A8;
+    font-weight: 500;
+    border: none;
+}
+
+.cont button {
+    width: 100px;
+    height: fit-content;
+    padding: 4px;
+}
+
+footer{
+    bottom: 0px;
+}
+
+section {
+    height: 450px;
+    overflow-y: scroll;
+}

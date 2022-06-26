@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+.LogIn-SignIn{
+	border-radius: 20px;
+	background-color: white;
+	padding: 50px;
+	/* padding-left: 0%;
+	padding-right: 0%; */
+	margin: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+form {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input, button, h1, p{
+	width: 300px;
+	margin: 5px;
+	padding: 10px;
+}
+
+input{
+	margin-left: 20px;
+	border-radius: 30px;
+	border: 1px solid rgb(69, 69, 69);
+	background: white;
+}
+
+
+form button{
+	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0%;
+	border: none;
+	background-color: #3300FF;
+	color: white;
+	width: 140px;
+	font-family: 'Lora', serif;
+	margin-bottom: 0%;
+	cursor: pointer;
+}
+
+.welcome{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 50px;
+}
+
+.goToSign{
+	font-size: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.googleLogin{
+	/* margin-top: 0%; */
+	width: 200px;
+}
+
+.forgotPass{
+	text-decoration: none;
+	color: #5e5e5e;
+	font-size: 14px;
+}
