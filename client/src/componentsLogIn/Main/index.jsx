@@ -5,9 +5,9 @@ import { useState } from "react";
 
 const Main = () => {
 	const handleLogout = () => {
-		// localStorage.removeItem("token");
+		localStorage.removeItem("token");
 		console.log(localStorage);
-		//window.location.reload();
+		window.location.reload();
 	};
 
 	const [all, setAll] = useState(true);

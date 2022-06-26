@@ -34,15 +34,15 @@ router.post('/', async (req, res) => {
         res.status(401).send({error: er});
     }
 })
-//.delete('/', async (req, res) => {
-//     console.log(req.body);
-//     Category.deleteOne({ _id: req.body._id }).then(function(){
-//         console.log("Data deleted"); 
-//         res.status(200).send({message: "Data deleted"})// Success
-//     }).catch(function(error){
-//         res.status(400).send({message: `Delete Failed, Error: ${error}`})
-//         console.log(error); // Failure
-//     });
-// })
+.delete('/', async (req, res) => {
+    console.log(req.body);
+    Product.deleteOne({ _id: req.body._id }).then(function(){
+        console.log("Data deleted"); 
+        res.status(200).send({message: "Data deleted"})// Success
+    }).catch(function(error){
+        res.status(400).send({message: `Delete Failed, Error: ${error}`})
+        console.log(error); // Failure
+    });
+})
 
 module.exports = router;

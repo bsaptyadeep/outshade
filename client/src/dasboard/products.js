@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddProPop from './utils/addProPop';
+import './products.css'
 
 function Products() {
 
@@ -46,6 +47,12 @@ function Products() {
     }
   }
 
+  const deleteProduct = async (id) => {
+    const url = "http://localhost:8080/api/product";
+    const {data: res} = await axios.delete(url, { data: { _id: id } } )
+    console.log(res);
+  }
+
 useEffect(() => {
   setTimeout(() => {
     getCategories();
@@ -61,18 +68,25 @@ return (
           return (
             <div key={cat._id}>
               <h4>{cat.category}</h4>
-              <ul>
+              <div className='products'>
                 {
                   product.filter((pro) => {
                     return pro.category===cat.category
                   }).map((pro)=>{
                     return (
-                      <li>{pro.product}</li>
+                      <div key={pro._id} className='product'>
+                        {pro.product}
+                        <button
+                        onClick={()=> {
+                          deleteProduct(pro._id)
+                        }}
+                        >Delete</button>
+                        </div>
                     )
                   }
                   )
                 }
-              </ul>
+              </div>
             </div>
           )
         }) : (msg !== "" ? msg : (error !== "" ? error : "loading..."))
